@@ -1,0 +1,8 @@
+FROM node:latest
+WORKDIR /usr/src/app
+COPY . /usr/src/app
+
+RUN npm i -g nodemon
+RUN npm i
+
+ENTRYPOINT ["nodemon", "/usr/src/app/app/app.js"]
