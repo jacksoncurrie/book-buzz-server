@@ -1,0 +1,8 @@
+POST http://localhost:3000/bookReveiws
+Content-Type: application/json
+
+{
+  "name": "Jackson"
+}
+
+DELETE http://localhost:3000/bookReveiws/1
