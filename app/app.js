@@ -12,8 +12,7 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT ?? 3000;
 
-const mongoDB =
-  process.env.MONGO_URL ?? "mongodb://root:example@mongo/bookBuzz";
+const mongoDB = process.env.MONGO_URL ?? "mongodb://mongo/bookBuzz";
 mongoose.connect(
   mongoDB,
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
