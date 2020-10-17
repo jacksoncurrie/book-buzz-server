@@ -1,6 +1,6 @@
 GET http://localhost:3000/books
 
-GET http://localhost:3000/books/1
+GET http://localhost:3000/books/5f8a85aa3ea55707a1b6a62b
 
 GET http://localhost:3000/books/search/test
 
@@ -8,5 +8,7 @@ POST http://localhost:3000/books
 Content-Type: application/json
 
 {
-  "name": "Jackson"
+  "bookName": "Test book 3",
+  "author": "Test author 2",
+  "imageUrl": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/action-thriller-book-cover-design-template-3675ae3e3ac7ee095fc793ab61b812cc_screen.jpg?ts=1588152105"
 }

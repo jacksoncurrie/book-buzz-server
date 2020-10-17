@@ -1,9 +1,9 @@
-GET http://localhost:3000/users/5f86802a14b0a9009c8595c5
-
+GET http://localhost:3000/users/5f8a84914411c507133637b4
 
 POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "Jackson"
+  "email": "test@jackson.com",
+  "displayName": "Jackson"
 }

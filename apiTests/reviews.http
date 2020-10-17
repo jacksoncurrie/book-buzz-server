@@ -1,0 +1,11 @@
+POST http://localhost:3000/bookReveiws
+Content-Type: application/json
+
+{
+  "bookId": "5f8a85aa3ea55707a1b6a62b",
+  "revieweeId": "5f8a84914411c507133637b4",
+  "rating": "5",
+  "review": "Good book"
+}
+
+DELETE http://localhost:3000/bookReveiws/5f8a87bd3cc5840845623212
