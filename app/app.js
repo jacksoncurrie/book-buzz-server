@@ -26,4 +26,6 @@ app.use("/users", users);
 app.use("/books", books);
 app.use("/bookReveiws", bookReviews);
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+app.listen(port, () =>
+  console.log(`Example app listening at http://localhost:${port}`)
+);

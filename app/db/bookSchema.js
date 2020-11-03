@@ -16,6 +16,11 @@ const bookSchema = new mongoose.Schema({
     unique: false,
     required: true,
   },
+  description: {
+    type: String,
+    unique: false,
+    required: true,
+  },
   reviews: [
     {
       type: mongoose.Types.ObjectId,

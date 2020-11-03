@@ -1,5 +1,7 @@
 GET http://localhost:3000/users/5f8a84914411c507133637b4
 
+GET http://localhost:3000/users/exists/test%40jackson.com
+
 POST http://localhost:3000/users
 Content-Type: application/json
 

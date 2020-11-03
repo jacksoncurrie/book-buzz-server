@@ -12,6 +12,17 @@ router.get("/:userId", async (req, res) => {
   }
 });
 
+router.get("/exists/:email", async (req, res) => {
+  try {
+    const exists = await User.exists({
+      email: req.params.email,
+    });
+    res.send(exists);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
 router.post("/", async (req, res) => {
   try {
     const user = new User({
