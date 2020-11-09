@@ -1,4 +1,5 @@
-POST http://localhost:3000/bookReveiws
+POST http://localhost:3001/bookReveiws
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQGphY2tzb24uY29tIiwiaWF0IjoxNjA0OTE4MjkyLCJleHAiOjE2MDQ5MjAwOTJ9.28WNZpX5A0tjQloXEJdtvT25S6DvFgyIV1XPuE3uqTc
 Content-Type: application/json
 
 {
@@ -8,4 +9,4 @@ Content-Type: application/json
   "review": "Good book"
 }
 
-DELETE http://localhost:3000/bookReveiws/5f8a87bd3cc5840845623212
+DELETE http://localhost:3001/bookReveiws/5f8a87bd3cc5840845623212

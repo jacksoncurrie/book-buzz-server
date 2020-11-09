@@ -1,4 +1,5 @@
 import express from "express";
+import { generateAccessToken } from "../authentication/authentication.js";
 import User from "../db/userSchema.js";
 
 const router = express.Router();
@@ -30,7 +31,9 @@ router.post("/", async (req, res) => {
       displayName: req.body.displayName,
     });
     const userResult = await user.save();
-    res.send(userResult);
+    const token = generateAccessToken({ username: userResult.email });
+    res.json(token);
+    //res.send(userResult);
   } catch (error) {
     res.status(500).send(error);
   }

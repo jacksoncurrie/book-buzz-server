@@ -1,16 +1,16 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import dotenv from "dotenv";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
 import users from "./routes/usersRoute.js";
 import books from "./routes/booksRoute.js";
 import bookReviews from "./routes/reveiwsRoute.js";
 
-dotenv.config();
 const app = express();
-const port = process.env.PORT ?? 3000;
+const port = process.env.PORT ?? 3001;
 
 const mongoDB = process.env.MONGO_URL ?? "mongodb://mongo/bookbuzz";
 mongoose.connect(
