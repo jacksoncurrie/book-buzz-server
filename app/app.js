@@ -25,6 +25,7 @@ app.use(cors());
 app.use("/users", users);
 app.use("/books", books);
 app.use("/bookReveiws", bookReviews);
+app.use((_, res) => res.status(404).send("404 Not Found"));
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
