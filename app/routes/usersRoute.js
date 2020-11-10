@@ -17,7 +17,11 @@ router.post("/login", async (req, res) => {
     );
     if (!passwordMatches) return res.sendStatus(401);
     const token = generateAccessToken({ username: user.email });
-    res.send(token);
+    res.send({
+      email: user.email,
+      displayName: user.displayName,
+      token: token,
+    });
   } catch (error) {
     res.status(500).send(error);
   }
@@ -33,7 +37,11 @@ router.post("/", async (req, res) => {
     });
     const userResult = await user.save();
     const token = generateAccessToken({ username: userResult.email });
-    res.json(token);
+    res.send({
+      email: user.email,
+      displayName: user.displayName,
+      token: token,
+    });
   } catch (error) {
     res.status(500).send(error);
   }
