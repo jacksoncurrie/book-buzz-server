@@ -11,6 +11,11 @@ const userSchema = new mongoose.Schema({
     unique: false,
     required: true,
   },
+  passwordHash: {
+    type: String,
+    unique: false,
+    required: true,
+  }
 });
 
 export default mongoose.model("User", userSchema);

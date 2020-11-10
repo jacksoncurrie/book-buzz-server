@@ -1,11 +1,16 @@
-GET http://localhost:3001/users/5f8a84914411c507133637b4
-
-GET http://localhost:3001/users/exists/test%40jackson.com
-
 POST http://localhost:3001/users
 Content-Type: application/json
 
 {
+  "email": "test@jackson.com",
+  "displayName": "Jackson",
+  "password": "jackson"
+}
+
+POST http://localhost:3001/users/login
+Content-Type: application/json
+
+{
   "email": "test2@jackson.com",
-  "displayName": "Jackson"
+  "password": "jackson"
 }
