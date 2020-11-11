@@ -1,9 +1,0 @@
-[
-  {
-    "_id": { "$oid": "5fabc09f08ed6f00e05b7b79" },
-    "email": "test@test.test",
-    "displayName": "Jackson",
-    "passwordHash": "$2b$10$cAN/n2EQn0r1UPSf0UL/guYxVgCe4qTQHn0n4ubQN1fcqfbv9dB7G",
-    "__v": 0
-  }
-]

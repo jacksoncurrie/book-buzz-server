@@ -19,3 +19,9 @@ Add parameters to the .env file e.g. `PORT=3000`.
 - **PORT**
 
 - **MONGO_URL**
+
+## Export database
+
+**Export:** `mongodump --forceTableScan --host localhost --port 27017 --db bookbuzz`
+
+**Import:** `mongorestore --host localhost --port 27017 --db bookbuzz dump/bookbuzz`

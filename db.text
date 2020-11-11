@@ -1,2 +1,0 @@
-mongorestore --host localhost --port 27017 --db bookbuzz dump/bookbuzz
-mongodump --forceTableScan --host localhost --port 27017 --db bookbuzz
