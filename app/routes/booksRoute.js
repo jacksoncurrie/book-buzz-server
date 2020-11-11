@@ -1,4 +1,5 @@
 import express from "express";
+import { authenticateToken } from "../authentication/authentication.js";
 import Book from "../db/bookSchema.js";
 
 const router = express.Router();
@@ -52,7 +53,7 @@ router.get("/search/:search", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", authenticateToken, async (req, res) => {
   try {
     const book = new Book({
       bookName: req.body.bookName,

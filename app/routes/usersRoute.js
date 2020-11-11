@@ -11,6 +11,7 @@ const router = express.Router();
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
+    if (!user) return res.sendStatus(401);
     const passwordMatches = await checkPassword(
       req.body.password,
       user.passwordHash
@@ -18,6 +19,7 @@ router.post("/login", async (req, res) => {
     if (!passwordMatches) return res.sendStatus(401);
     const token = generateAccessToken({ username: user.email });
     res.send({
+      userId: user._id,
       email: user.email,
       displayName: user.displayName,
       token: token,
@@ -38,6 +40,7 @@ router.post("/", async (req, res) => {
     const userResult = await user.save();
     const token = generateAccessToken({ username: userResult.email });
     res.send({
+      userId: userResult._id,
       email: user.email,
       displayName: user.displayName,
       token: token,

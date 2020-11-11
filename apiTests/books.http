@@ -5,6 +5,7 @@ GET http://localhost:3001/books/5f8a85aa3ea55707a1b6a62b
 GET http://localhost:3001/books/search/test
 
 POST http://localhost:3001/books
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQGphY2tzb24uY29tIiwiaWF0IjoxNjA1MDg1NzkzLCJleHAiOjE2MDUwODkzOTN9.5lJqawz7HBDWRGeTGzvbPfBEeqfFgS2YwGqmfmiXMm0
 Content-Type: application/json
 
 {
