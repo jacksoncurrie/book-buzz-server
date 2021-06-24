@@ -16,7 +16,7 @@ const mongoDB = process.env.MONGO_URL ?? "mongodb://mongo/bookbuzz";
 mongoose.connect(
   mongoDB,
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
-  () => console.log("Connected to database")
+  () => console.log("Connected to database " + mongoDB)
 );
 
 app.use(bodyParser.json());
@@ -28,5 +28,5 @@ app.use("/bookReveiws", bookReviews);
 app.use((_, res) => res.status(404).send("404 Not Found"));
 
 app.listen(port, () =>
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 );
