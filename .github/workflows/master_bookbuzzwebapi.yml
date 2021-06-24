@@ -11,6 +11,9 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    
+    env:
+      MONGO_URL: ${{ secrets.MONGODB_URL }}
 
     steps:
     # checkout the repo
