@@ -16,7 +16,7 @@ const mongoDB = process.env.MONGO_URL ?? "mongodb://mongo/bookbuzz";
 mongoose.connect(
   mongoDB,
   { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
-  () => console.log("Connected to database " + mongoDB)
+  () => console.log("Connected to database")
 );
 
 app.use(bodyParser.json());
